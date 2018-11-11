@@ -7,15 +7,14 @@ import math
 
 def printMenu():
     print("1 - Négyzet területe\n2 - Téglalap területe\n3 - Kör területe\n0 - Kilépés\n")
+    return int(input("menüpont száma: "))
 
 
-printMenu()
-n = int(input("menüpont száma: "))
+n = printMenu()
 
 while n != 0:
     if n == -1:
-        printMenu()
-        n = int(input("menüpont száma: "))
+        n = printMenu()
 
     if n != 0:
         if n == 1:

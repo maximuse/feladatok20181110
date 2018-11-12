@@ -18,12 +18,12 @@ legkevesebb = bevittKaloria[0]
 
 for j in bevittKaloria:
     if j >= legtobb:
-        legtobb = j
         legtobbIndex = bevittKaloria.index(j)
+        legtobb = j
 
     if j <= legkevesebb:
-        legkevesebb = j
         legkevesebbIndex = bevittKaloria.index(j)
+        legkevesebb = j
 
 print("\nÖsszes kalóriafogyasztás: " + str(osszeg))
 print("Napi átlag kalóriafogyasztást: " + str(osszeg / napokSzama))

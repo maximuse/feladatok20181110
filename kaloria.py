@@ -2,7 +2,7 @@
 # kalóriafogyasztásunkat, valamint a napi átlag kalóriafogyasztást, illetve, hogy hányadik napon fogyasztottuk a
 # legtöbb és a legkevesebb kalóriát!
 
-napiBevittKaloria = []
+bevittKaloria = []
 napokSzama = 7
 osszeg = 0
 legtobbIndex = 0
@@ -10,22 +10,22 @@ legkevesebbIndex = 0
 
 for i in range(napokSzama):
     n = int(input(str(i+1) + ". nap: "))
-    napiBevittKaloria.insert(i, n)
+    bevittKaloria.insert(i, n)
     osszeg += n
 
-legtobb = napiBevittKaloria[0]
-legkevesebb = napiBevittKaloria[0]
+legtobb = bevittKaloria[0]
+legkevesebb = bevittKaloria[0]
 
-for j in napiBevittKaloria:
+for j in bevittKaloria:
     if j >= legtobb:
         legtobb = j
-        legtobbIndex = napiBevittKaloria.index(j)
+        legtobbIndex = bevittKaloria.index(j)
 
     if j <= legkevesebb:
         legkevesebb = j
-        legkevesebbIndex = napiBevittKaloria.index(j)
+        legkevesebbIndex = bevittKaloria.index(j)
 
 print("\nÖsszes kalóriafogyasztás: " + str(osszeg))
 print("Napi átlag kalóriafogyasztást: " + str(osszeg / napokSzama))
-print("A legtöbb kalóriát (" + str(napiBevittKaloria[legtobbIndex]) + ") a(z) " + str(legtobbIndex+1) + ". napon fogyasztotta.")
-print("A legkevesebb kalóriát (" + str(napiBevittKaloria[legkevesebbIndex]) + ") a(z) " + str(legkevesebbIndex+1) + ". napon fogyasztotta.")
+print("A legtöbb kalóriát (" + str(bevittKaloria[legtobbIndex]) + ") a(z) " + str(legtobbIndex + 1) + ". napon fogyasztotta.")
+print("A legkevesebb kalóriát (" + str(bevittKaloria[legkevesebbIndex]) + ") a(z) " + str(legkevesebbIndex + 1) + ". napon fogyasztotta.")
